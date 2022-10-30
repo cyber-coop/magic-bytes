@@ -1,14 +1,10 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+pub struct MagicBytes;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+impl MagicBytes {
+    pub const BITCOIN_MAINNET: [u8; 4] = [0xF9, 0xBE, 0xB4, 0xD9];
+    pub const BITCOIN_TESTNET: [u8; 4] = [0xFA, 0xBF, 0xB5, 0xDA];
+    pub const BITCOIN_REGTEST: [u8; 4] = [0x0b, 0x11, 0x09, 0x07];
+    pub const BITCOIN_SIGNET: [u8; 4] = [0x0A, 0x03, 0xCF, 0x40];
+    pub const NAMECOIN_MAINNET: [u8; 4] = [0xF9, 0xBE, 0xB4, 0xFE];
+    pub const DOGECOIN_TESTNET: [u8; 4] = [0xFC, 0xC1, 0xB7, 0xDC];
 }
