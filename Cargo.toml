@@ -2,7 +2,9 @@
 name = "magic-bytes"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
+authors = ["ethicnology", "Lola Rigaut-Luczak <me@laflemme.lol>"]
+description = "Network magic bytes for Bitcoin, Litecoin, Namecoin and Dogecoin."
+readme = "README.md"
+repository = "https://github.com/cyber-coop/magic-bytes"
+license = "GPL-3.0 license"
+keywords = ["magic", "bitcoin", "dogecoin", "litecoin", "namecoin"]
