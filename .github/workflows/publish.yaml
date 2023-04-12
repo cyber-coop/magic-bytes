@@ -1,7 +1,6 @@
 name: "Publish packages"
 
 on:
-  push:
   release:
     types:
       - created
@@ -22,6 +21,6 @@ jobs:
           override: true
       - name: Cargo publish
         # To have it work you need to set CARGO_REGISTRY_TOKEN environnement variable
-        run: cargo publish --dry-run
+        run: cargo publish
         env:
            CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
