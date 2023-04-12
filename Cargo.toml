@@ -1,6 +1,6 @@
 [package]
 name = "magic-bytes"
-version = "0.1.0"
+version = "0.0.0"
 edition = "2021"
 authors = ["ethicnology", "Lola Rigaut-Luczak <me@laflemme.lol>"]
 description = "Network magic bytes for Bitcoin, Litecoin, Namecoin and Dogecoin."
