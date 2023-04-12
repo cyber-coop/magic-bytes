@@ -1,0 +1,24 @@
+name: "Publish packages"
+
+on:
+  release:
+    types:
+      - created
+    tags:
+      - "v[0-9]+(\\.[0-9]+)*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install latest stable
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: latest
+      - name: Cargo publish
+        # To have it work you need to set CARGO_REGISTRY_TOKEN environnement variable
+        run: cargo publish --dry-run
+        env:
+           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
