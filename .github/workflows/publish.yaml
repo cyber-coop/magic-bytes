@@ -1,6 +1,7 @@
 name: "Publish packages"
 
 on:
+  push:
   release:
     types:
       - created
